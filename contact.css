@@ -1,0 +1,808 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins&display=swap');
+
+/* Body & Background */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+    background: white;
+}
+/* Header layout same on every page */
+.main-header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: center;
+  z-index: 999;
+  background: transparent;
+}
+
+/* Navigation container */
+.nav-container {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+
+/* Logo */
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  color: #b76e79;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+/* Hamburger menu (hidden by default) */
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: #444;
+  cursor: pointer;
+}
+
+/* Nav and search grouping */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+/* Nav links */
+.nav-links {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #444;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #b76e79;
+}
+
+/* Search */
+.search-container {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.search-btn {
+  padding: 8px;
+  border: none;
+  background-color: #e3bbc5;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-btn:hover {
+  background-color: #a25c67;
+}
+
+.search-container input {
+  width: 0;
+  opacity: 0;
+  padding: 6px 0;
+  margin-left: 8px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.7);
+  outline: none;
+  font-size: 14px;
+  transition: width 0.3s, opacity 0.3s, padding 0.3s;
+  pointer-events: none;
+}
+
+.search-container.active input {
+  width: 140px;
+  opacity: 1;
+  padding: 6px 12px;
+  pointer-events: auto;
+}
+
+/*here we will start our main hero section need any help wala*/
+.main-hero{
+  position: relative;
+  width: 100%;
+  height: 50vh;
+  background: #fadfe3;
+  margin-top: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.centerbox{ 
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+}
+h1 {
+  font-family: 'Playfair Display', serif;
+  text-transform: capitalize;
+  font-size: 48px;
+  color: black;
+  margin-bottom: 15px;
+}
+.smalltext{
+    font-family:'Playfair Display', serif ;
+    color: white;
+}
+.searchbar {
+  position: relative;
+  width: 450px; /* adjust width as needed */
+  margin-top: 110px;
+}
+
+.searchbar input[type="text"] {
+  width: 100%;
+  padding: 15px 50px 15px 20px; /* padding-right gives space for the icon */
+  border: none;
+  border-radius: 25px;
+  background-color: white;
+  font-size: 16px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  outline: none;
+}
+
+.searchbar .search-btn {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.searchbar .search-btn svg {
+  width: 20px;
+  height: 20px;
+  stroke: #333;
+}
+/* this is for the top floating banner */
+.floating-banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: black;
+  color: white;
+  overflow: hidden;
+  z-index: 9999;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid #fff;
+}
+
+.scrolling-text {
+  white-space: nowrap;
+  padding-left: 100%;
+  display: inline-block;
+  animation: scroll-left 15s linear infinite;
+  font-weight: bold;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* To prevent overlap with header */
+.main-header {
+  margin-top: 40px;
+}
+
+/* Faq section */
+.faqs {
+  text-align: left;
+  margin: 2rem 0;
+  padding-left: 3vw;  /* adjust as needed */
+  margin-top: 80px;
+
+  
+}
+
+
+.faq-heading h5 {
+  font-size: 32px;
+  color: #222;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  
+ 
+}
+
+.articles {
+  max-width: 800px;
+  margin: 0 auto;
+
+ 
+}
+
+.list-items {
+  list-style: none;
+  padding: 0;
+}
+
+.list-item {
+  background-color: #ffffff;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  padding: 20px 25px;
+  /* box-shadow: 0 5px 8px rgba(0, 0, 0, 0.09); */
+  transition: transform 0.2s ease;
+}
+
+.list-item:hover {
+  transform: translateY(-3px);
+}
+
+.list-item h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #b30059; /* rose/deep pink */
+}
+
+.list-item p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+}
+/*fade in for faqs */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* CONTACT US HEADER */
+.contact-us-heading {
+  text-align: center;
+  font-size: 2rem;
+  margin: 4rem 0 2rem;
+  font-weight: bold;
+  color: #222;
+  margin-bottom: 50px;
+  margin-top: 90px;
+  text-transform: uppercase;
+ 
+}
+
+/* CONTACT SECTION STYLING */
+.contact-section {
+  padding: 4rem 2rem;
+  background-color: #fff;
+ font-family: 'Playfair Display', serif;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 4rem;
+  border-top: 2px solid #f1f1f1;
+  padding-top: 2rem;
+}
+
+/* LEFT */
+.contact-left {
+  flex: 1;
+  max-width: 40%;
+}
+
+.contact-left h2 {
+  font-style: italic;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #b30059;
+}
+
+.contact-left p {
+  font-size: 1rem;
+  color: #333;
+   font-family: 'Playfair Display', serif;
+}
+
+/* RIGHT */
+.contact-right {
+  flex: 1;
+  border-left: 2px solid pink;
+  padding-left: 2rem;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.contact-form label {
+  font-size: 0.9rem;
+  color: #000;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form input {
+  border: none;
+  border-bottom: 2px solid #ccc;
+  padding: 0.5rem 0;
+  outline: none;
+  background: transparent;
+  color: #000;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form input:hover {
+  border-bottom-color: pink;
+}
+
+.contact-form button {
+  margin-top: 1rem;
+  padding: 0.75rem 2rem;
+  background-color: rgb(254, 185, 197);
+  color: #000;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: #b30059;
+}
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* footerrr */
+.footer {
+  position: relative;
+  width: 100%;
+  background: black;
+  min-height: 100px;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.social-icon,
+.menu {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+
+.social-icon__item,
+.menu__item {
+  list-style: none;
+}
+
+.social-icon__link {
+  font-size: 2rem;
+  color: #fff;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+}
+.social-icon__link:hover {
+  transform: translateY(-10px);
+}
+
+.menu__link {
+  font-size: 1.2rem;
+  color: #fff;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+  text-decoration: none;
+  opacity: 0.75;
+  font-weight: 300;
+}
+
+.menu__link:hover {
+  opacity: 1;
+}
+
+.footer p {
+  color: #fff;
+  margin: 15px 0 10px 0;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.wave {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: url("https://i.ibb.co/wQZVxxk/wave.png");
+  background-size: 1000px 100px;
+}
+
+.wave#wave1 {
+  z-index: 1000;
+  opacity: 1;
+  bottom: 0;
+  animation: animateWaves 4s linear infinite;
+}
+
+.wave#wave2 {
+  z-index: 999;
+  opacity: 0.5;
+  bottom: 10px;
+  animation: animate 4s linear infinite !important;
+}
+
+.wave#wave3 {
+  z-index: 1000;
+  opacity: 0.2;
+  bottom: 15px;
+  animation: animateWaves 3s linear infinite;
+}
+
+.wave#wave4 {
+  z-index: 999;
+  opacity: 0.7;
+  bottom: 20px;
+  animation: animate 3s linear infinite;
+}
+
+@keyframes animateWaves {
+  0% {
+    background-position-x: 1000px;
+  }
+  100% {
+    background-positon-x: 0px;
+  }
+}
+
+@keyframes animate {
+  0% {
+    background-position-x: -1000px;
+  }
+  100% {
+    background-positon-x: 0px;
+  }
+}
+.label-box:active {
+  transform: scale(0.95);
+  background-color: #b30059;
+  color: white;
+  border-color: #b30059;
+  transition: all 0.1s ease;
+}
+.label-box.clicked {
+  background-color: #b30059;
+  color: white;
+  border-color: #b30059;
+  transform: scale(1.05);
+  box-shadow: 0 0 10px #b30059;
+}
+.label-box:hover {
+  background-color: #f0f0f0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#full-map {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+}
+
+#full-map iframe {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border: none;
+}
+
+
+
+.location-card {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: linear-gradient(135deg, #d6f0ff 0%, #fce4ec 100%);
+  padding: 20px 35px;
+  border-radius: 16px;
+  max-width: 350px;
+  font-family: 'Segoe UI', sans-serif;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  z-index: 999;
+  backdrop-filter: blur(8px);
+}
+
+.location-card h2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #222;
+  letter-spacing: 0.5px;
+}
+
+.location-card p {
+  font-size: 15px;
+  color: #333;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+.directions-btn {
+  display: inline-block;
+  text-decoration: none;
+  background-color: #111;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 13px;
+  letter-spacing: 1px;
+  transition: background-color 0.3s;
+}
+
+.directions-btn:hover {
+  background-color: #333;
+}
+
+
+/* adding responsiveness first to header*/
+@media (max-width: 768px) {
+  /* Header padding and stacking */
+  .main-header {
+    padding: 15px 20px;
+  }
+
+  .nav-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-right {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .nav-links a {
+    font-size: 16px;
+  }
+
+  /* Optional: show/hide nav links with a hamburger menu */
+  .menu-toggle {
+    display: block;
+    margin-left: auto;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .nav-container.open .nav-links {
+    display: flex;
+  }
+
+  /* Hero Section */
+  .main-hero {
+    height: auto;
+    padding: 80px 20px 40px;
+    text-align: center;
+  }
+
+  .centerbox h1 {
+    font-size: 32px;
+  }
+
+  .searchbar {
+    width: 100%;
+    max-width: 100%;
+    margin-top: 60px;
+  }
+
+  .searchbar input[type="text"] {
+    font-size: 14px;
+    padding: 12px 40px 12px 16px;
+  }
+
+  .searchbar .search-btn svg {
+    width: 18px;
+    height: 18px;
+  }
+}
+/*faq section responsiveness */
+@media (max-width: 768px) {
+  /* FAQ section */
+  .faqs {
+    padding: 0 1.5rem;
+    margin-top: 60px;
+  }
+
+  .faq-heading h5 {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .articles {
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .list-item {
+    padding: 15px 20px;
+  }
+
+  .list-item h3 {
+    font-size: 18px;
+  }
+
+  .list-item p {
+    font-size: 15px;
+  }
+}
+@media (max-width: 480px) {
+  .list-item h3 {
+    font-size: 16px;
+  }
+
+  .list-item p {
+    font-size: 14px;
+  }
+
+  .faq-heading h5 {
+    font-size: 20px;
+  }
+}
+/* contact section */
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .contact-left, 
+  .contact-right {
+    max-width: 100%;
+    width: 100%;
+    padding: 0;
+    border: none;
+  }
+
+  .contact-left h2 {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+
+  .contact-left p {
+    text-align: center;
+  }
+
+  .contact-form label {
+    font-size: 1rem;
+  }
+
+  .contact-form button {
+    width: 100%;
+  }
+}
+@media (max-width: 480px) {
+  .contact-us-heading {
+    font-size: 1.5rem;
+  }
+
+  .contact-left h2 {
+    font-size: 1.4rem;
+  }
+
+  .contact-form input {
+    font-size: 0.95rem;
+  }
+
+  .contact-form button {
+    padding: 0.6rem 1.5rem;
+    font-size: 0.95rem;
+  }
+}
+/*footer */
+@media (max-width: 768px) {
+  .footer {
+    padding: 40px 20px;
+  }
+
+  .social-icon,
+  .menu {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .social-icon__link,
+  .menu__link {
+    font-size: 1.1rem;
+    margin: 6px 0;
+  }
+
+  .footer p {
+    text-align: center;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .social-icon__link {
+    font-size: 1.6rem;
+  }
+
+  .menu__link {
+    font-size: 1rem;
+  }
+
+  .footer p {
+    font-size: 0.85rem;
+  }
+}
+

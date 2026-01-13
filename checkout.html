@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Checkout</title>
+  
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins&display=swap');
+    body {
+       font-family: 'Playfair Display', serif;
+      margin: 0;
+      padding: 2rem;
+      background: #f3c9d3;
+    }
+
+  .checkout-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  font-family: 'Playfair Display', serif;
+  color: #333;
+}
+
+.checkout-form {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.checkout-section {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.checkout-section h2 {
+  margin-bottom: 20px;
+  color:  #b3005f; 
+  font-size: 1.5rem;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 10px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.form-grid input,
+textarea,
+.credit-card-form input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+textarea {
+  min-height: 80px;
+  margin-top: 10px;
+}
+
+.order-summary table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  
+}
+
+.order-summary th,
+.order-summary td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  background-color: white;
+  text-align: left;
+
+}
+
+.order-summary th {
+  background-color: #cf0370;
+
+  color: #fff;
+}
+
+.payment-method .credit-card-form {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 15px;
+  margin: 10px 0 20px;
+}
+
+.terms {
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+}
+
+.terms input {
+  margin-right: 10px;
+}
+
+.place-order {
+  background-color:  #d85299;
+  color: white;
+  font-weight: bold;
+  padding: 15px 20px;
+  border: none;
+  width: 100%;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.place-order:hover {
+  background-color: #b3005f;
+}
+.back-to-site {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  background-color: #b3005f;
+  color: #fff;
+  font-weight: bold;
+  font-size: 0.95rem;
+  padding: 10px 18px;
+  border-radius: 30px;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(82, 22, 56, 0.3);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  z-index: 1000;
+}
+
+
+
+.back-to-site:hover {
+  color: #6e1846;
+  text-decoration: underline;
+}
+
+@media (max-width: 1024px) {
+  .checkout-container {
+    padding: 15px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .credit-card-form {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 1.5rem;
+  }
+
+  .checkout-section h2 {
+    font-size: 1.3rem;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .credit-card-form {
+    grid-template-columns: 1fr;
+  }
+
+  .place-order {
+    font-size: 1rem;
+    padding: 12px;
+  }
+
+  .back-to-site {
+    font-size: 0.85rem;
+    top: 15px;
+    right: 20px;
+    padding: 8px 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 1rem;
+  }
+
+  .checkout-container {
+    margin: 20px auto;
+    padding: 10px;
+  }
+
+  .checkout-section h2 {
+    font-size: 1.1rem;
+  }
+
+  .place-order {
+    font-size: 0.95rem;
+  }
+
+  .back-to-site {
+    top: 10px;
+    right: 15px;
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
+
+  th, td {
+    font-size: 0.9rem;
+  }
+}
+
+
+  </style>
+</head>
+<body>
+  <h1>Checkout</h1>
+
+    <a href="home.html" class="back-to-site">← Back to ROSE</a>
+
+      <tbody id="checkout-items">
+      <!-- Billing Details -->
+    <div class="checkout-section billing-details">
+      <h2>Billing details</h2>
+      <div class="form-grid">
+        <input type="text" placeholder="First name*" required />
+        <input type="text" placeholder="Last name*" required />
+        <input type="text" placeholder="Company name (optional)" />
+        <input type="text" placeholder="Country / Region*" required />
+        <input type="text" placeholder="Street address*" required />
+        <input type="text" placeholder="Apartment, suite, etc. (optional)" />
+        <input type="text" placeholder="Town / City*" required />
+        <input type="text" placeholder="State*" required />
+        <input type="text" placeholder="ZIP Code*" required />
+        <input type="email" placeholder="Email address*" required />
+        <input type="tel" placeholder="Phone*" required />
+        <input type="password" placeholder="Create account password*" />
+      </div>
+    </div>
+
+    <!-- Shipping -->
+    <div class="checkout-section shipping-details">
+      <label>
+        <input type="checkbox" /> Ship to a different address?
+      </label>
+      <textarea placeholder="Order notes (optional)"></textarea>
+    </div>
+
+      
+  <div class="checkout-section order-summary">
+  <h2>Your order</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Product</th>
+        <th>Subtotal</th>
+      </tr>
+    </thead>
+    <tbody id="order-summary-body">
+      <!-- Items injected by JS -->
+    </tbody>
+    <tfoot>
+      <tr>
+        <td><strong>Total</strong></td>
+        <td id="order-total"><strong>$0.00</strong></td>
+      </tr>
+    </tfoot>
+  </table>
+</div>
+
+
+    <!-- Payment Method -->
+    <div class="checkout-section payment-method">
+      <h2>Payment Method</h2>
+      <div class="credit-card-form">
+        <input type="text" placeholder="Card Number*" required />
+        <input type="text" placeholder="MM / YY*" required />
+        <input type="text" placeholder="CVC*" required />
+      </div>
+      <label class="terms">
+        <input type="checkbox" required />
+        I have read and agree to the website terms and conditions*
+      </label>
+      <button type="submit" class="place-order">PLACE ORDER</button>
+    </div>
+      
+<script>
+  const cart = JSON.parse(localStorage.getItem("cartData")) || [];
+  const tbody = document.getElementById("order-summary-body");
+  const totalEl = document.getElementById("order-total");
+
+  let total = 0;
+
+  cart.forEach(item => {
+    const subtotal = item.price * item.quantity;
+    total += subtotal;
+
+    const row = document.createElement("tr");
+    row.innerHTML = `
+      <td>${item.name} × ${item.quantity}</td>
+      <td>$${subtotal.toFixed(2)}</td>
+    `;
+    tbody.appendChild(row);
+  });
+
+  totalEl.innerHTML = `<strong>$${total.toFixed(2)}</strong>`;
+</script>
+
+</body>
+</html>

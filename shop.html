@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="shop.css">
+    <title>Document</title>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+
+</head>
+
+<body>
+    <div class="floating-banner">
+        <div class="scrolling-text"> 30% MEGA SALE GOING ON RIGHT NOW! SHOP NOW — LIMITED TIME ONLY! FREE SHIPPING ON
+            ALL ORDERS </div>
+    </div>
+
+    <div class="background"></div>
+    <header class="main-header">
+        <div class="nav-container">
+            <div class="logo">ROSE</div>
+            <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
+            <div class="nav-right">
+                <nav class="nav-links">
+                    <a href="home.html">Home</a>
+                    <a href="shop.html">Shop</a>
+                    <a href="aboutus.html">About Us</a>
+                    <a href="contact.html">Help</a>
+                </nav>
+                <div class="search-container">
+                    <button class="search-btn" aria-label="Search">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <circle cx="9" cy="9" r="7" stroke="white" stroke-width="2" />
+                            <line x1="14.4142" y1="14" x2="18" y2="17.5858" stroke="white" stroke-width="2"
+                                stroke-linecap="round" />
+                        </svg>
+                    </button>
+                    <input class="search-input" type="text" placeholder="Search..." />
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Fragrance That Defines You</h1>
+            <p>Elegant. Timeless. Yours.</p>
+            <button onclick="document.getElementById('products').scrollIntoView({ behavior: 'smooth' })">Shop
+                Now</button>
+        </div>
+
+        <model-viewer src="rose.glb" alt="3D Rose" auto-rotate rotation-per-second="20deg" camera-controls disable-zoom
+            auto-rotate-delay="0" camera-orbit="75deg 30deg auto" shadow-intensity="0.5"
+            style="background: transparent; width: 50vw; height: 80vh; margin-top: 5%; position: relative; left: 5%;">
+            </model-viewer>
+    </section>
+
+    <section id="products">
+        <div class="product-container">
+            <div class="leftside">
+                <img src="rose.png" alt="Perfume 1" />
+            </div>
+            <div class="rightside">
+                <h2>Rose Essence</h2>
+
+                <div class="rating">
+                    <span class="stars">★★★★☆</span>
+                    <span class="reviews">(102 reviews)</span>
+                </div>
+
+                <p class="description">
+                    Experience the essence of elegance with our Rose Essence perfume. A blend of floral notes that
+                    captivates the senses.
+                </p>
+
+                <div class="price">
+                    <span class="original-price">$100</span>
+                    <span class="discounted-price">$70</span>
+                </div>
+
+                <div class="features">
+                    <p><span class="tick">✔</span> Long-lasting fragrance</p>
+                    <p><span class="tick">✔</span> 100% cruelty-free</p>
+                    <p><span class="tick">✔</span> Eco-friendly packaging</p>
+                    <p><span class="tick">✔</span> Perfect for gifting</p>
+                </div>
+
+                <hr />
+
+                <div class="quantity">
+                    <label for="quantity">Quantity:</label>
+                    <button type="button" class="quantity-btn minus">-</button>
+                    <input type="number" id="quantity" name="quantity" min="1" max="10" value="1">
+                    <button type="button" class="quantity-btn plus">+</button>
+                </div>
+
+
+
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    
+    <footer class="footer">
+        <div class="waves">
+            <div class="wave" id="wave1"></div>
+            <div class="wave" id="wave2"></div>
+            <div class="wave" id="wave3"></div>
+            <div class="wave" id="wave4"></div>
+        </div>
+         <ul class="social-icon">
+      <li class="social-icon__item"><a class="social-icon__link" href="https://www.facebook.com" target="_blank">
+          <ion-icon name="logo-facebook"></ion-icon>
+        </a></li>
+      <li class="social-icon__item"><a class="social-icon__link" href="https://www.twitter.com" target="_blank">
+          <ion-icon name="logo-twitter"></ion-icon>
+        </a></li>
+      <li class="social-icon__item"><a class="social-icon__link" href="https://www.linkedin.com/in/sadia--halima" target="_blank">
+          <ion-icon name="logo-linkedin"></ion-icon>
+        </a></li>
+      <li class="social-icon__item"><a class="social-icon__link" href="https://www.instagram.com" target="_blank">
+          <ion-icon name="logo-instagram"></ion-icon>
+        </a></li>
+    </ul>
+ <ul class="menu">
+      <li class="menu__item"><a class="menu__link" href="home.html" >Home</a></li>
+      <li class="menu__item"><a class="menu__link" href="aboutus.html">About Us</a></li>
+      <li class="menu__item"><a class="menu__link" href="shop.html">Shop</a></li>
+      <li class="menu__item"><a class="menu__link" href="contact.html">Help</a></li>
+
+    </ul>
+        <p>&copy;2025 | All Rights Reserved</p>
+    </footer>
+
+
+    <!-- Cart Icon -->
+    <div id="cart-icon">🛒 <span id="cart-count">0</span></div>
+
+    <!-- Cart Panel -->
+    <div id="cart-panel" class="cart-panel hidden">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <button id="close-cart">&times;</button>
+        </div>
+        <div id="cart-items"></div>
+        <div class="cart-footer">
+            <strong>Total: $<span id="cart-total">0</span></strong>
+            <button id="checkout-btn" >Checkout</button>
+        </div>
+    </div>
+
+
+
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <script src="shop.js"></script>
+
+
+
+
+
+
+</body>
+
+</html>

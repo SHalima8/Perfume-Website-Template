@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="aboutus.css">
+</head>
+<body>
+      <div class="floating-banner">
+  <div class="scrolling-text"> 30% MEGA SALE GOING ON RIGHT NOW! SHOP NOW — LIMITED TIME ONLY! FREE SHIPPING ON ALL ORDERS             </div>
+</div>
+    <div class="background"></div>
+  <header class="main-header">
+    <div class="nav-container">
+      <div class="logo">ROSE</div>
+      <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
+      <div class="nav-right">
+        <nav class="nav-links">
+          <a href="home.html">Home</a>
+          <a href="shop.html">Shop</a>
+          <a href="aboutus.html">About Us</a>
+          <a href="contact.html">Help</a>
+        </nav>
+        <div class="search-container">
+          <button class="search-btn" aria-label="Search">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <circle cx="9" cy="9" r="7" stroke="white" stroke-width="2"/>
+              <line x1="14.4142" y1="14" x2="18" y2="17.5858" stroke="white" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </button>
+          <input class="search-input" type="text" placeholder="Search..." />
+        </div>
+      </div>
+    </div>
+  </header>
+ <!-- adding three.js idhar -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+
+<section class="hero-section">
+  <canvas id="bg-canvas" style="position: fixed; top: 0; left: 0; z-index: -1;"></canvas>
+
+  <div class="hero-background"></div>
+  <div class="hero-text">
+    <p class="core-subheading">Our Core</p>
+    <h1 class="main-heading">BOLD SCENTS</h1>
+    <h1 class="main-heading">EVERLASTING BLISS</h1>
+  </div>
+</section> 
+
+<div class="faces-section">
+  <!-- LEFT TEXT -->
+  <div class="faces-text fade-in">
+    <h2>GET TO KNOW<br>THE FACES BEHIND ROSE</h2>
+  </div>
+
+  <!-- RIGHT IMAGES WITH HOVER NAMES -->
+  <div class="faces-images fade-in">
+    <div class="image-box">
+      <img src="sadia.jpg" alt="Sadia Halima" />
+      <div class="caption">Sadia Halima</div>
+    </div>
+    <div class="image-box">
+      <img src="iffat.jpg" alt="Iffat Fatima" />
+      <div class="caption">Iffat Fatima</div>
+    </div>
+  </div>
+</div>
+
+<div class="reviews-section fade-in">
+  <h2 class="reviews-title"> See What Our Customers Have to Say</h2>
+  
+  <div class="reviews-grid">
+    <!-- Review Card 1 -->
+    <div class="review-card">
+      <div class="stars">⭐⭐⭐⭐⭐</div>
+      <p class="review-text">
+        “Absolutely loved the perfume! Loved the scent , very classic.”
+      </p>
+      <div class="review-footer">
+        <img src="user1.jpg" alt="User" class="review-pic" />
+        <div>
+          <div class="review-name">Zara L.</div>
+          <div class="review-role">Founder, Bloomwear</div>
+        </div>
+      </div>
+    </div>
+    <!-- Review Card 2 -->
+     <div class="review-card">
+      <div class="stars">⭐⭐⭐⭐</div>
+      <p class="review-text">
+        “Have gotten so many compliments since i started wearing this! Great buy”
+      </p>
+      <div class="review-footer">
+        <img src="user4.jpg" alt="User" class="review-pic" />
+        <div>
+          <div class="review-name">L Lawliet.</div>
+          <div class="review-role">Worker, Chanel</div>
+        </div>
+      </div>
+    </div>
+    <!-- Review Card 3 -->
+     <div class="review-card">
+      <div class="stars">⭐⭐⭐⭐⭐</div>
+      <p class="review-text">
+        “Great packaging and amazing floral scent.”
+      </p>
+      <div class="review-footer">
+        <img src="user5.jpg" alt="User" class="review-pic" />
+        <div>
+          <div class="review-name">Sparrow H.</div>
+          <div class="review-role">Influencer</div>
+        </div>
+      </div>
+    </div>
+    <!-- Review Card 4 -->
+     <div class="review-card">
+      <div class="stars">⭐⭐⭐⭐⭐</div>
+      <p class="review-text">
+        “The team is so helpful, I had an issue with a defected bottle and i was sent a new one as soon as i contacted hr. This one is perfect”
+      </p>
+      <div class="review-footer">
+        <img src="kageyama.jpeg" alt="User" class="review-pic" />
+        <div>
+          <div class="review-name">Shigeo Kageyama.</div>
+          <div class="review-role">Student</div>
+        </div>
+      </div>
+    </div>
+    <!-- Review Card 5 -->
+     <div class="review-card">
+      <div class="stars">⭐⭐⭐⭐⭐</div>
+      <p class="review-text">
+        “Great product even greater team special shoutout to Iffat , shes the goat.”
+      </p>
+      <div class="review-footer">
+        <img src="user2.jpg" alt="User" class="review-pic" />
+        <div>
+          <div class="review-name">Reol.</div>
+          <div class="review-role">Singer</div>
+        </div>
+      </div>
+    </div>
+    <div class="review-card">
+      <div class="stars">⭐⭐⭐⭐⭐</div>
+      <p class="review-text">
+        “I was skeptical at first but this perfume is worth every penny. The scent lasts all day and the packaging is beautiful.”
+      </p>
+      <div class="review-footer">
+        <img src="user3.jpg" alt="User" class="review-pic" />
+        <div>
+          <div class="review-name">Sara T.</div>
+          <div class="review-role">Office Worker, Linkedin</div>
+        </div>
+      </div>
+    </div>
+      <!--review card 6-->
+      
+
+    <!-- Duplicate and customize this card for other 5 reviews -->
+  </div>
+</div>
+
+<footer class="footer">
+    <div class="waves">
+      <div class="wave" id="wave1"></div>
+      <div class="wave" id="wave2"></div>
+      <div class="wave" id="wave3"></div>
+      <div class="wave" id="wave4"></div>
+    </div>
+  <ul class="social-icon">
+      <li class="social-icon__item"><a class="social-icon__link" href="https://www.facebook.com" target="_blank">
+          <ion-icon name="logo-facebook"></ion-icon>
+        </a></li>
+      <li class="social-icon__item"><a class="social-icon__link" href="https://www.twitter.com" target="_blank">
+          <ion-icon name="logo-twitter"></ion-icon>
+        </a></li>
+      <li class="social-icon__item"><a class="social-icon__link" href="https://www.linkedin.com/in/sadia--halima" target="_blank">
+          <ion-icon name="logo-linkedin"></ion-icon>
+        </a></li>
+      <li class="social-icon__item"><a class="social-icon__link" href="https://www.instagram.com" target="_blank">
+          <ion-icon name="logo-instagram"></ion-icon>
+        </a></li>
+    </ul>
+ <ul class="menu">
+      <li class="menu__item"><a class="menu__link" href="home.html">Home</a></li>
+      <li class="menu__item"><a class="menu__link" href="aboutus.html">About Us</a></li>
+      <li class="menu__item"><a class="menu__link" href="shop.html">Shop</a></li>
+      <li class="menu__item"><a class="menu__link" href="contact.html">Help</a></li>
+
+    </ul>
+    <p>&copy;2025 | All Rights Reserved</p>
+  </footer>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
+
+
+<script src="aboutus.js" defer></script>
+
+</body>
+</html>

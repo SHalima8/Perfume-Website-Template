@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="home.css">
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <!-- GSAP Core -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+<!-- ScrollTrigger Plugin -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+
+
+
+</head>
+<body>
+
+ <div id="glow-container"></div>
+<div class="cursor-glow"></div> 
+ <div class="floating-banner">
+        <div class="scrolling-text"> 30% MEGA SALE GOING ON RIGHT NOW! SHOP NOW — LIMITED TIME ONLY! FREE SHIPPING ON
+            ALL ORDERS </div>
+    </div>
+
+
+
+
+   <div class="background"></div>
+  <header class="main-header">
+    <div class="nav-container">
+      <div class="logo">ROSE</div>
+      <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
+      <div class="nav-right">
+        <nav class="nav-links">
+          <a href="home.html">Home</a>
+          <a href="shop.html">Shop</a>
+          <a href="aboutus.html">About Us</a>
+          <a href="contact.html">Help</a>
+        </nav>
+        <div class="search-container">
+          <button class="search-btn" aria-label="Search">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <circle cx="9" cy="9" r="7" stroke="white" stroke-width="2"/>
+              <line x1="14.4142" y1="14" x2="18" y2="17.5858" stroke="white" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </button>
+          <input class="search-input" type="text" placeholder="Search..." />
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+ <section class="hero-section">
+
+    <div class="hero-title">ROSE</div>
+
+ <div class="bottle-wrapper">
+  <model-viewer 
+    id="bottleModel"
+    src="bottle.glb"
+    alt="Perfume Bottle"
+    disable-zoom
+    disable-pan
+    disable-tap
+    style="width: 350px; height: 350px;">
+  </model-viewer>
+</div>
+
+<div class="hero-background"></div>
+
+</section>
+
+
+
+ 
+<section class="window-two" id="windowTwo">
+  <div class="features feature-left">
+    <div class="feature-box">
+      <h2 class="feature-heading">Long-Lasting</h2>
+      <p class="feature-text">Crafted to stay with you from sunrise to after hours — our scent endures like confidence</p>
+    </div>
+    <div class="feature-box">
+      <h2 class="feature-heading">All-Day Fresh</h2>
+      <p class="feature-text">Whether it's a morning meeting or a midnight stroll, our fragrance remains crisp and captivating.</p>
+    </div>
+    <div class="feature-box">
+      <h2 class="feature-heading">Unique Fragrance</h2>
+      <p class="feature-text">A rare blend of floral and musk — unforgettable and unlike anything you’ve ever worn before.</p>
+    </div>
+  </div>
+
+  <div class="bottle-container">
+    <model-viewer id="bottleModel" ...></model-viewer>
+  </div>
+
+  <div class="features feature-right">
+    <div class="feature-box">
+      <h2 class="feature-heading">Elegant Design</h2>
+      <p class="feature-text">The bottle is as enchanting as the scent — a piece of art that complements any vanity.</p>
+    </div>
+    <div class="feature-box">
+      <h2 class="feature-heading">Quality</h2>
+      <p class="feature-text">Each note is sourced with care, blended to perfection by master perfumers for a luxurious finish.</p>
+    </div>
+    <div class="feature-box">
+      <h2 class="feature-heading">Eco-Friendly</h2>
+      <p class="feature-text">Sustainably packaged, ethically crafted — because beauty should never come at nature’s expense.</p>
+    </div>
+  </div>
+</section>
+
+<section class="ingredients-section" id="windowThree">
+  <div class="ingredients-title">Our Ingredients</div>
+
+  <div class="carousel-wrapper">
+    <!-- Radio buttons control carousel position -->
+    <input type="radio" name="position" checked />
+    <input type="radio" name="position" />
+    <input type="radio" name="position" />
+    <input type="radio" name="position" />
+    <input type="radio" name="position" />
+
+    <main id="carousel">
+     <div class="item" style="--offset: 1;">
+  <img src="flower.png" alt="Rose">
+  <div class="info">
+    <h3>Rose Essence</h3>
+    <p>Harvested at dawn for maximum fragrance intensity.</p>
+  </div>
+</div>
+
+<div class="item" style="--offset: 2;">
+  <img src="vanilla.png" alt="Vanilla">
+  <div class="info">
+    <h3>Vanilla Bean</h3>
+    <p>Warm, smooth, and naturally sweet from Madagascar.</p>
+  </div>
+</div>
+
+<div class="item" style="--offset: 3;">
+  <img src="oud.png" alt="Oud">
+  <div class="info">
+    <h3>Oud Wood</h3>
+    <p>Deep, smoky richness sourced from Southeast Asia.</p>
+  </div>
+</div>
+
+<div class="item" style="--offset: 4;">
+  <img src="jasmine.png" alt="Jasmine">
+  <div class="info">
+    <h3>Jasmine Petals</h3>
+    <p>Soft floral notes that add elegance and lift.</p>
+  </div>
+</div>
+
+<div class="item" style="--offset: 5;">
+  <img src="amber.png" alt="Amber">
+  <div class="info">
+    <h3>Amber Resin</h3>
+    <p>A golden base note with warm, balsamic richness.</p>
+  </div>
+</div>
+
+    </main>
+  </div>
+</section>
+
+
+<!--now as we scroll to next window the text should move up and bottle should come down and become bigger and text should fade in from mid of screen -->
+<!-- first there should be top text saying our product and then 3 headings on right side of bottle with subtext same w left side -->
+<footer class="footer">
+    <div class="waves">
+      <div class="wave" id="wave1"></div>
+      <div class="wave" id="wave2"></div>
+      <div class="wave" id="wave3"></div>
+      <div class="wave" id="wave4"></div>
+    </div>
+    <ul class="social-icon">
+      <li class="social-icon__item"><a class="social-icon__link" href="https://www.facebook.com" target="_blank">
+          <ion-icon name="logo-facebook"></ion-icon>
+        </a></li>
+      <li class="social-icon__item"><a class="social-icon__link" href="https://www.twitter.com" target="_blank">
+          <ion-icon name="logo-twitter"></ion-icon>
+        </a></li>
+      <li class="social-icon__item"><a class="social-icon__link" href="https://www.linkedin.com/in/sadia--halima" target="_blank">
+          <ion-icon name="logo-linkedin"></ion-icon>
+        </a></li>
+      <li class="social-icon__item"><a class="social-icon__link" href="https://www.instagram.com" target="_blank">
+          <ion-icon name="logo-instagram"></ion-icon>
+        </a></li>
+    </ul>
+    <ul class="menu">
+      <li class="menu__item"><a class="menu__link" href="home.html">Home</a></li>
+      <li class="menu__item"><a class="menu__link" href="aboutus.html">About Us</a></li>
+      <li class="menu__item"><a class="menu__link" href="shop.html">Shop</a></li>
+      <li class="menu__item"><a class="menu__link" href="contact.html">Help</a></li>
+
+    </ul>
+    <p>&copy;2025 | All Rights Reserved</p>
+  </footer>
+     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
+
+  <script src="home.js" defer></script>
+</body>
+</html>
